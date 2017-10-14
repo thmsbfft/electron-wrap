@@ -5,7 +5,7 @@ echo ""
 echo "Copying files..."
 echo ""
 curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/package.json
-curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/index.js
+curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/index-electron-wrap.js
 curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/icon.icns
 
 # replace name in package with current directory name
