@@ -2,10 +2,10 @@
   "name": "electron-wrap",
   "version": "1.0.0",
   "description": "",
-  "main": "16C4D9BE52A4EB6B78A31B8D8E3E4B69CABFF4E92AAC86211505391619DE87D2.js",
+  "main": "index-16C4D9BE52A4EB6B78A31B8D8E3E4B69CABFF4E92AAC86211505391619DE87D2.js",
   "scripts": {
     "start": "electron .",
-    "package": "electron-packager . --overwrite --prune --out=build --platform=darwin --arch=x64 --icon=16C4D9BE52A4EB6B78A31B8D8E3E4B69CABFF4E92AAC86211505391619DE87D2.icns"
+    "package": "electron-packager . --overwrite --prune --out=build --platform=darwin --arch=x64 --icon=icon-16C4D9BE52A4EB6B78A31B8D8E3E4B69CABFF4E92AAC86211505391619DE87D2.icns"
   },
   "author": "thmsbfft",
   "license": "ISC",
