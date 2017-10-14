@@ -2,7 +2,7 @@
 
 ---
 
-Package any static web folder into a desktop application (macOS). The process requires Node/npm.
+Package any local/static website folder into a desktop application (macOS). The process requires Node/npm.
 
 To do so, `cd` to the folder that contains the files, and run:
 
