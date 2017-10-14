@@ -2,6 +2,7 @@
 if [ -e package.json ]
 then
     echo "/!\ package.json already exists."
+    echo "/!\ Installation aborted."
     exit
 else
   # copy files
