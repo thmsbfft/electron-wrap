@@ -2,7 +2,7 @@
 
 ---
 
-Package any local/static website folder into a desktop application (macOS). The process requires Node/npm.
+Package any local/static website folder (typically a `/public`) into a desktop application (electron/macOS). The process requires Node/npm.
 
 To do so, `cd` to the folder that contains the files, and run:
 
@@ -19,3 +19,9 @@ The script will:
 **➂** Install the dependencies (electron, express to serve the files)
 
 **➃** Package the folder into an Electron executable
+
+**➄** Cleanup the files it downloaded + node_modules/
+
+---
+
+Useful for prototyping, presenting, or for simple offline stuff.
