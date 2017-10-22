@@ -21,8 +21,8 @@ server.listen(port, function() {
 
 function open () {
   let bw_options = {
-    width: 800,
-    height: 600
+    width: 1280,
+    height: 900
   }
 
   w = new BrowserWindow(
