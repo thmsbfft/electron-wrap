@@ -9,12 +9,6 @@ else
   read -p "Window width: " width
   read -p "Window height: " height
 
-  ICON=true
-  if [ ! -f icon.icns ]; then
-      echo "Icon not found!"
-      ICON=false
-  fi
-
   # copy files
   echo ""
   echo "Copying files..."
@@ -23,18 +17,19 @@ else
   curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/index-electron-wrap.js
 
   # replace values
-  sed -i '' "s/electron-wrap/$name/" package.json
+  sed -i '' "s/name-electron-wrap/$name/" package.json
   sed -i '' "s/WINDOW_WIDTH\ =\ null/WINDOW_WIDTH\ =\ $width/" index-electron-wrap.js
   sed -i '' "s/WINDOW_HEIGHT\ =\ null/WINDOW_HEIGHT\ =\ $height/" index-electron-wrap.js
   
   # if there's an icon, use it 
   # otherwise, download a generic icon
-  if $ICON ; then
-    sed -i '' "s/icon-electron-wrap.icns/icon.icns/" package.json
+  if [ -e icon.icns ]; then
+      sed -i '' "s/icon-electron-wrap.icns/icon.icns/" package.json
   else
-    curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/icon-electron-wrap.icns
+      echo "Icon not found!"
+      curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/icon-electron-wrap.icns
   fi
-
+  
   # install dependencies
   echo ""
   echo "Installing node modules..."
