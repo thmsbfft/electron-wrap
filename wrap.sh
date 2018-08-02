@@ -21,14 +21,18 @@ else
   echo ""
   curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/package.json
   curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/index-electron-wrap.js
-  curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/icon-electron-wrap.icns
 
   # replace values
-  sed -i "s/electron-wrap/$name/" package.json
-  sed -i "s/WINDOW_WIDTH\ =\ null/WINDOW_WIDTH\ =\ $width/" index-electron-wrap.js
-  sed -i "s/WINDOW_HEIGHT\ =\ null/WINDOW_HEIGHT\ =\ $height/" index-electron-wrap.js
+  sed -i '' "s/electron-wrap/$name/" package.json
+  sed -i '' "s/WINDOW_WIDTH\ =\ null/WINDOW_WIDTH\ =\ $width/" index-electron-wrap.js
+  sed -i '' "s/WINDOW_HEIGHT\ =\ null/WINDOW_HEIGHT\ =\ $height/" index-electron-wrap.js
+  
+  # if there's an icon, use it 
+  # otherwise, download a generic icon
   if $ICON ; then
-    sed -i "s/icon-electron-wrap.icns/icon.icns/" package.json
+    sed -i '' "s/icon-electron-wrap.icns/icon.icns/" package.json
+  else
+    curl -O https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/icon-electron-wrap.icns
   fi
 
   # install dependencies

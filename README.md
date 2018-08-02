@@ -10,17 +10,15 @@ To do so, `cd` to the folder that contains the files, and run:
 bash <(curl -s https://raw.githubusercontent.com/thmsbfft/electron-wrap/master/wrap.sh)
 ```
 
-The script will:
+The script will ask for a name and a window size for the app. After that, the script will:
 
-**➀** Download `package.json`, `index.js`, and `icon.icns` from this repository
+**➀** Download `package.json` and `index.js` from this repository
 
-**➁** Replace the name of the app by your folder's name
+**➁** Install the dependencies (electron, express to serve the files)
 
-**➂** Install the dependencies (electron, express to serve the files)
+**➂** Package the folder into an Electron executable
 
-**➃** Package the folder into an Electron executable
-
-**➄** Cleanup the files it downloaded + `node_modules/`
+**➃** Cleanup the files it downloaded + `node_modules/`
 
 ---
 
