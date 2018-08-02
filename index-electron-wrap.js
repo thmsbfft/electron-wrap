@@ -1,9 +1,11 @@
 const {app, Menu, BrowserWindow} = require('electron')
-
 const express = require('express')
 
 const path = require('path')
 const url = require('url')
+
+const WINDOW_WIDTH = null
+const WINDOW_HEIGHT = null
 
 var w
 
@@ -21,8 +23,8 @@ server.listen(port, function() {
 
 function open () {
   let bw_options = {
-    width: 1680,
-    height: 1056
+    width: WINDOW_WIDTH ? WINDOW_WIDTH : 1680,
+    height: WINDOW_HEIGHT ? WINDOW_HEIGHT : 1056
   }
 
   w = new BrowserWindow(
