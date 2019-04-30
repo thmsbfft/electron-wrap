@@ -8,12 +8,5 @@
     "package": "electron-packager . --overwrite --prune --out=build --platform=darwin --arch=x64 --icon=icon-electron-wrap.icns"
   },
   "author": "thmsbfft",
-  "license": "ISC",
-  "devDependencies": {
-    "electron": "^1.7.9",
-    "electron-packager": "^9.1.0"
-  },
-  "dependencies": {
-    "express": "^4.16.2"
-  }
+  "license": "MIT"
 }

@@ -34,7 +34,9 @@ else
   echo ""
   echo "Installing node modules..."
   echo ""
-  npm i
+  npm install electron --save-dev
+  npm install electron-packager --save-dev
+  npm install express --save
 
   # package the folder
   npm run package
