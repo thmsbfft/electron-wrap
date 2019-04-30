@@ -24,13 +24,14 @@ server.listen(port, function() {
 function open () {
   let bw_options = {
     width: WINDOW_WIDTH ? WINDOW_WIDTH : 412,
-    height: WINDOW_HEIGHT ? WINDOW_HEIGHT : 870,
-    resizable: false
+    height: WINDOW_HEIGHT ? WINDOW_HEIGHT : 870
   }
 
   w = new BrowserWindow(
     bw_options
   )
+
+  w.setResizable(false)
 
   w.loadURL(url.format({
     pathname: 'localhost' + ':' + port,
